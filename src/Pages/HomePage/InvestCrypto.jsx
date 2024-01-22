@@ -25,7 +25,7 @@ const InvestCrypto = () => {
             </p>
           </div>
           <div className=" w-[100%]  flex p-10 ">
-            <div className="w-[40%] px-10">
+            <div className="w-[40%] px-5">
               <button className=" flex items-center justify-center Start-swap bg-[#5E9270] cursor-pointer text-center px-[1.5rem] py-[0.6rem] rounded-3xl text-white font-medium text-lg ">
                 <p className="text-2xl transform transition-transform group-hover:scale-150">
                   &#8594;
@@ -53,7 +53,7 @@ const InvestCrypto = () => {
             </p>
           </div>
           <div className=" w-[100%] flex p-10">
-            <div className="w-[40%]  px-10">
+            <div className="w-[40%]  px-5">
               <button className=" flex items-center justify-center Start-swap bg-[#5E9270] cursor-pointer text-center px-[1.5rem] py-[0.6rem] rounded-3xl text-white font-medium text-lg ">
                 <p className="text-2xl transform transition-transform group-hover:scale-150">
                   &#8594;

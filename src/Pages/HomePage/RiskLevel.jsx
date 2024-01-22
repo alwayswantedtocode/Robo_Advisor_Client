@@ -65,11 +65,11 @@ const RiskLevel = () => {
   //   "bg-[#E4C89A]",
 
   return (
-    <div className=" flex flex-col lg:flex-row justify-center w-[100%]  mb-[5rem] relative font-slab">
+    <div className=" flex flex-col lg:flex-row justify-center w-[100%]  mb-[5rem] relative font-slab ">
       {portfolioData && (
         <div className="flex flex-col  w-[100%] lg:w-[60%]  bg-[#ffff]  ">
           <div className=" flex items-center justify-center mt-[1rem]">
-            <div className="w-[70%] md:w-[50%]  lg:w-[50%] h-[6rem]  flex flex-col items-center justify-center border-2 border-[#5E9270] rounded-lg  bg-[#FFFF] shadow-xl">
+            <div className="w-[70%] md:w-[50%]  lg:w-[50%] h-[6rem]  flex flex-col items-center justify-center border-2 border-[#5E9270] rounded-lg  bg-[#FFFF] shadow-xl my-7">
               <div className="w-full flex  items-center justify-between px-4 mb-3 ">
                 <h2 className="font-semibold md:text-lg">
                   Risk Score: {riskScore}

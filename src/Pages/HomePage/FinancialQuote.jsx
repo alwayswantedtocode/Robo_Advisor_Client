@@ -13,7 +13,7 @@ const FinancialQuote = () => {
           </p>
         </span>
 
-        <span>
+        <span className="mb-10">
           <p className="Quote text-2xl md:text-4xl font-medium leading-[3.5rem] mb-[1rem]">
             &#34;Investing success is measured by a solid financial plan and
             disciplined behavior, not just beating the market. &#34;

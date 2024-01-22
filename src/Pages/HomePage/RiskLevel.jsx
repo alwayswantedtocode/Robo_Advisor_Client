@@ -33,7 +33,7 @@ const RiskLevel = () => {
       try {
         // const res = await axios.get("http://localhost:5000/Getriskdata");
         const res = await axios.get(
-          "http://localhost:5000/Getriskdata/65a95e20f5dde4eb9a249719"
+          "https://robo-advisor-cloud-1.onrender.com/Getriskdata/65a95e20f5dde4eb9a249719"
         );
         setPortfolioData(res.data);
       } catch (error) {

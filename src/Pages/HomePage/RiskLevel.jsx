@@ -3,23 +3,7 @@ import { RxQuestionMarkCircled } from "react-icons/rx";
 import axios from "axios";
 
 const RiskLevel = () => {
-  const data = [
-    {
-      id: 1,
-      title: "Tailored insights for your financial journey",
-      body: "Your specific job, net income, and location help us provide personalized advice, ensuring your financial path is uniquely suited to your circumstances.",
-    },
-    {
-      id: 2,
-      title: "Understand your risk tolerance",
-      body: "Your specific job, net income, and location help us provide personalized advice, ensuring your financial path is uniquely suited to your circumstances.",
-    },
-    {
-      id: 3,
-      title: "Smart and diverse investment strategies",
-      body: "Our analysis of market trends and historical performance empowers you to make well-informed decisions, leveraging data to navigate the financial landscape.",
-    },
-  ];
+  
 
   const [riskScore, setRiskScore] = useState(0);
   const [portfolioData, setPortfolioData] = useState(null);
@@ -31,11 +15,12 @@ const RiskLevel = () => {
   useEffect(() => {
     const fetchRiskdata = async () => {
       try {
-        // const res = await axios.get("http://localhost:5000/Getriskdata");
+       
         const res = await axios.get(
           "https://robo-advisor-cloud-1.onrender.com/Getriskdata/65a95e20f5dde4eb9a249719"
         );
         setPortfolioData(res.data);
+        
       } catch (error) {
         console.error(error);
       }
@@ -66,7 +51,7 @@ const RiskLevel = () => {
 
   return (
     <div className=" flex flex-col lg:flex-row justify-center w-[100%]  mb-[5rem] relative font-slab ">
-      {portfolioData && (
+      {portfolioData ? (
         <div className="flex flex-col  w-[100%] lg:w-[60%]  bg-[#ffff]  ">
           <div className=" flex items-center justify-center mt-[1rem]">
             <div className="w-[70%] md:w-[50%]  lg:w-[50%] h-[6rem]  flex flex-col items-center justify-center border-2 border-[#5E9270] rounded-lg  bg-[#FFFF] shadow-xl my-7">
@@ -87,6 +72,7 @@ const RiskLevel = () => {
               />
             </div>
           </div>
+          
           {/* Portfolio Risk level representation */}
           <div className="flex flex-col lg:flex-row ">
             <div className=" w-[100%]  px-[2rem]  md:pt-[3rem] md:pb-[3rem] md:px-[3rem] ">
@@ -138,7 +124,10 @@ const RiskLevel = () => {
             </div>
           </div>
         </div>
+      ):(
+      <div className="h-[10rem] bg-[#E9D502] text-lg md:text-xl font-normal flex flex-col items-center justify-center px-10">Slow server API response time; Please reload</div>
       )}
+      <div><p></p><p></p></div>
 
       <div className="w-[100%] lg:w-[40%] flex item-center justify-center">
         <div className="w-[100%] px-10 py-10 lg:pl-10 lg:pr-[7rem] text-black  flex flex-col items-center justify-center gap-5">
